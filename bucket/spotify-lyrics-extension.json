@@ -1,0 +1,16 @@
+{
+    "version": "1.5.27",
+    "description": "Desktop Spotify Web Player Instant Synchronised Lyrics",
+    "homepage": "https://github.com/mantou132/Spotify-Lyrics",
+    "license": "Unlicense",
+    "url": "https://github.com/mantou132/Spotify-Lyrics/releases/download/1.5.27/spotify_lyrics-1.5.27.zip",
+    "hash": "603165395ab1e2100980dfff7ff5cfedd2e7bef07bced05da9013eb617c24108",
+    "extract_to": "unpacked",
+    "post_install": "Write-Output \"Load unpacked extension in developer mode at $dir\\unpacked\"",
+    "checkver": {
+        "github": "https://github.com/mantou132/Spotify-Lyrics"
+    },
+    "autoupdate": {
+        "url": "https://github.com/mantou132/Spotify-Lyrics/releases/download/$version/spotify_lyrics-$version.zip"
+    }
+}
