@@ -14,4 +14,5 @@ scoop bucket add dearrrfish "https://github.com/dearrrfish/scoop-bucket"
 | **Name** | **Description** |
 | :------: | :-------------: |
 | [Spotify-Lyrics](https://github.com/mantou132/Spotify-Lyrics) | Browser extension of Lyrics display for Spotify Web Player |
-| [Yank Note](https://github.com/purocean/yn) | Markdown Editor |
+| [Yank Note](https://github.com/purocean/yn) | Markdown editor and note taking |
+| [EmEditor](https://www.emeditor.com/download/) | Fast text Editor |
