@@ -1,0 +1,33 @@
+{
+    "version": "20220327",
+    "description": "Ultra light self-hosted file server.",
+    "homepage": "https://webd.cf/",
+    "license": "Freeware",
+    "url": "https://gwgw.ga/webd/20220327/webd-20220327-win32.7z",
+    "hash": "sha1:b2f7fadd92c2f3ccf185a9eec9ab2af807261602",
+    "extract_dir": [
+        "webd"
+    ],
+    "bin": [
+        "webd.exe"
+    ],
+    "shortcuts": [
+        [
+            "webd.exe",
+            "webd"
+        ]
+    ],
+    "persist": [
+        "webd.conf"
+    ],
+    "checkver": {
+        "url": "https://webd.cf/",
+        "regex": ">下载地址 (\\d+)</a>"
+    },
+    "autoupdate": {
+        "url": "https://gwgw.ga/webd/$version/webd-$version-win32.7z"
+    },
+    "notes": [
+        "Visit https://webd.cf/ for usage."
+    ]
+}
