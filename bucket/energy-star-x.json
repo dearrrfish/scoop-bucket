@@ -1,0 +1,31 @@
+{
+    "version": "0.2.2",
+    "description": "Throttle background programs automatically for better battery life.",
+    "homepage": "https://github.com/ArakawaHenri/EnergyStarX",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ArakawaHenri/EnergyStarX/releases/download/0.2.2.0/EnergyStar-GUI-0.2.2-amd64.zip",
+            "hash": "7489e96bace86217c45b6babd81271e55aefd20b9692e9a5dd538b88da6fb5cc",
+            "extract_dir": "EnergyStar-GUI-0.2.2-amd64"
+        }
+    },
+    "shortcuts": [
+        [
+            "EnergyStar.exe",
+            "Energy Star X"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/ArakawaHenri/EnergyStarX/releases",
+        "jsonpath": "$[0].name"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ArakawaHenri/EnergyStarX/releases/download/$version/EnergyStar-GUI-$matchHead-amd64.zip",
+                "extract_dir": "EnergyStar-GUI-$matchHead-amd64"
+            }
+        }
+    }
+}
