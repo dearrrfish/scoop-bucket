@@ -15,6 +15,7 @@ scoop bucket add dearrrfish "https://github.com/dearrrfish/scoop-bucket"
 | :------: | :-------------: |
 | [EmEditor](https://www.emeditor.com/download/) | Fast text Editor |
 | [EnergyStarX](https://github.com/ArakawaHenri/EnergyStarX) | Throttle background programs automatically for better battery life |
+| [Icalingua++](https://github.com/Icalingua-plus-plus/Icalingua-plus-plus) | A client for QQ and more.:electron: |
 | [Spotify-Lyrics](https://github.com/mantou132/Spotify-Lyrics) | Browser extension of Lyrics display for Spotify Web Player |
 | [Webd](https://webd.cf/) | Ultra light self-hosted file server |
 | [Yank Note](https://github.com/purocean/yn) | Markdown editor and note taking |

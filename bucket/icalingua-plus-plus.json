@@ -1,0 +1,35 @@
+{
+    "version": "2.7.6",
+    "description": "A client for QQ and more.",
+    "homepage": "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus",
+    "license": "GNU Affero General Public License v3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus/releases/download/v2.7.6/Icalingua++-2.7.6_x64.exe"
+        }
+    },
+    "installer": {
+        "script": [
+            "7z.exe e \"$dir\\$fname\" -o\"$dir\" \"app-64.7z\" -r",
+            "7z.exe x \"$dir\\app-64.7z\" -o\"$dir\"",
+            "Remove-Item \"$dir\\app-64.7z\"",
+            "Remove-Item \"$dir\\$fname\""
+        ]
+    },
+    "shortcuts": [
+        [
+            "Icalingua++.exe",
+            "Icalingua++"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus/releases/download/v$version/Icalingua++-$version_x64.exe"
+            }
+        }
+    }
+}
