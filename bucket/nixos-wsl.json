@@ -1,0 +1,38 @@
+{
+    "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)",
+    "version": "22.05-5c211b47",
+    "description": "NixOS on WSL(2)",
+    "homepage": "https://github.com/nix-community/NixOS-WSL",
+    "license": "Apache-2.0",
+    "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
+    "url": "https://github.com/nix-community/NixOS-WSL/releases/download/22.05-5c211b47/nixos-wsl-installer.tar.gz",
+    "post_install": [
+        "$installable = $true",
+        "if ($null -eq (Get-Command 'wslconfig' -ErrorAction SilentlyContinue)) {",
+        "    warn 'WSL appears not to be enabled!'",
+        "    warn 'Run ''Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux'''",
+        "    warn 'from an elevated PowerShell. Restart your computer when prompted and reinstall ArchWSL.'",
+        "    $installable = $false",
+        "}",
+        "if ($installable) {",
+        "    $fname_tar = $fname.Replace(\".gz\", \"\")",
+        "    $res = Invoke-ExternalCommand \"wsl\" @('--import', \"$persist\\\", \"$dir\\$fname_tar\")",
+        "    if(!$res) { error 'NixOS-WSL installation failed!'; return }",
+        "}",
+        "Remove-Item \"$dir\\$fname_tar\" -Force"
+    ],
+    "uninstaller": {
+        "script": [
+            "if ($cmd -ne 'uninstall') { return }",
+            "Invoke-ExternalCommand \"wsl\" @('--unregister', 'NixOS') | Out-Null"
+        ]
+    },
+    "persist": "data",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/nix-community/NixOS-WSL/releases/download/$version/nixos-wsl-installer.tar.gz",
+        "hash": {
+            "url": "$url.sha256"
+        }
+    }
+}
