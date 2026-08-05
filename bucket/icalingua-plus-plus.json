@@ -1,12 +1,12 @@
 {
-    "version": "2.26.2",
+    "version": "2.26.3",
     "description": "A client for QQ and more.",
     "homepage": "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus",
     "license": "GNU Affero General Public License v3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus/releases/download/v2.26.2/Icalingua++-2.26.2_x64.exe",
-            "hash": "bdaf53db6c771d84a615d0f4a21668ad852c5913948470f07069c897da946077"
+            "url": "https://github.com/Icalingua-plus-plus/Icalingua-plus-plus/releases/download/v2.26.3/Icalingua++-2.26.3_x64.exe",
+            "hash": "305ad99fc528a4367b02ee64949e243a075f1aa563b4f47ef13c2fcbced86adc"
         }
     },
     "installer": {
